@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id = "Book" class = "com.atguigu.ioc.bean.Book">
+	<property name="author" value = "吴承恩"/>
+	<property name="bookName" value = "西游记"/>
+	<property name="price" value = "200.0"/>
+	<property name="bookId" value = "0001"/>
+</bean>
+<!-- 实验3：通过构造器为bean的属性赋值
+	<bean id="book03" class="com.atguigu.ioc.bean.Book">
+		
+		按照有参的构造器创建对象首先要保证类中确实有对应的构造器
+		String bookName, String author, double price, String isbn
+		<constructor-arg value="施耐庵"/>
+		<constructor-arg value="水浒传"/>
+		<constructor-arg value="200.00"/>
+		<constructor-arg value="ISBN0002"/>
+	
+	</bean> -->
+	<!-- 实验3：通过构造器为bean的属性赋值 -->
+	<bean id = "Book02" class = "com.atguigu.ioc.bean.Book">
+	<constructor-arg value = "罗贯中"/>
+	<constructor-arg value = "三国演义"/>
+	<constructor-arg value = "100.00"/>
+	<constructor-arg value = "0002"/>
+	
+	
+	</bean>
+	<!-- 实验4通过index属性为属性赋值 -->
+	<bean id = "Book03" class = "com.atguigu.ioc.bean.Book">
+		<constructor-arg index = "1" value = "红楼梦"/>
+		<constructor-arg index = "0" value = "曹雪芹"/>
+		<constructor-arg  value = "200.00"/>
+		<constructor-arg  value = "0003"/>
+	
+	</bean>
+</beans>
