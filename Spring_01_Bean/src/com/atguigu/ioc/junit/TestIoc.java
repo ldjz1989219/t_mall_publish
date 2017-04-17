@@ -46,6 +46,7 @@ public class TestIoc {
 		System.out.println(book);
 		System.out.println("hello java");
 		System.out.println("你好我已修改");
+		System.out.println("我再次修改");
 	}
 
 }
