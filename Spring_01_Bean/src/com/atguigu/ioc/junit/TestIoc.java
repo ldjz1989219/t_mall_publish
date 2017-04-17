@@ -44,6 +44,7 @@ public class TestIoc {
 		//2.从创建好的ioc对象中获取对象
 		Book book = (Book) ioc.getBean("Book");
 		System.out.println(book);
+		System.out.println("hello java");
 	}
 
 }
