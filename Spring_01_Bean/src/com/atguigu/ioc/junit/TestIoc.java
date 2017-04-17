@@ -45,6 +45,7 @@ public class TestIoc {
 		Book book = (Book) ioc.getBean("Book");
 		System.out.println(book);
 		System.out.println("hello java");
+		System.out.println("你好我已修改");
 	}
 
 }
