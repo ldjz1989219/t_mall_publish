@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.crud.mapper.UserDao">
+    <resultMap type="com.atguigu.crud.entity.User" id="userMap">
+        <id property="id" column="id" />
+        <result property="username" column="username" />
+        <result property="password" column="password" />        
+    </resultMap>
+     <select id="getUserByName" parameterType="string" resultMap="userMap">
+            <!-- 此处写sql语句,#{Mapper类传入的参数} -->
+            select * from USER where username = #{username}
+    </select>
+</mapper>
